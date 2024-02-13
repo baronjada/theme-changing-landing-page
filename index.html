@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reading - my hobby 📚</title>
+    <style>
+      body {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(255, 246, 236) 39.5%,
+          rgba(100, 46, 122, 0.23) 100.2%
+        );
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+      }
+
+      p {
+        font-size: 17px;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 3px solid #152a38;
+        background: #e4e5db;
+        font-size: 20px;
+        border-radius: 6px;
+        padding: 10px 25px;
+        transition: all 150ms ease-in-out;
+      }
+
+      button:hover {
+        background: #2f5241;
+        color: #e4e5db;
+        cursor: pointer;
+      }
+
+      footer {
+        text-align: center;
+        margin: 25px 0;
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background: #e4e5db;
+        padding: 20px;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .theme-button {
+        font-size: 12px;
+        background: #152a38;
+        color: #e4e5db;
+        padding: 5px 10px;
+      }
+
+      .theme-button:hover {
+        background: #2f5241;
+        color: #d6cfb9;
+        border: 3px solid #2f5241;
+      }
+      .reading-intro-picture {
+        border-radius: 15px;
+        transition: all 150ms ease-in-out;
+      }
+
+      .reading-intro-picture:hover {
+        filter: contrast(50%);
+        transform: scale(1.1);
+      }
+
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 15px;
+      }
+
+      .grid img {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        transition: all 150ms ease-in-out;
+      }
+
+      .grid img:hover {
+        transform: scale(2.5);
+      }
+
+      .dark {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(98, 114, 128) 0%,
+          rgb(52, 63, 51) 90.1%
+        );
+        color: #e4e5db;
+      }
+
+      .dark .container {
+        background: #2f5241;
+      }
+
+      .dark a {
+        color: #d6cfb9;
+      }
+
+      .dark button {
+        background: #152a38;
+        color: #e4e5db;
+      }
+
+      .dark button:hover {
+        background: #e4e5db;
+        color: #152a38;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change theme</button>
+    <div class="container">
+      <h1>Do you love reading too? 📖</h1>
+      <h2>It's my favorite hobby!</h2>
+      <a
+        href="https://basmo.app/is-reading-a-hobby/#:~:text=Yes%2C%20generally%20speaking%2C%20reading%20can,in%20what%20constitutes%20a%20hobby."
+        target="_blank"
+        ><img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/763/original/thought-catalog-IcUbKfIuQ70-unsplash.jpg?1701615509"
+          alt=""
+          class="reading-intro-picture"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/762/original/thought-catalog-OJZB0VUQKKc-unsplash.jpg?1701614579"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/761/original/thought-catalog-mmWqrsjZ4Lw-unsplash.jpg?1701614564"
+          alt=""
+        />
+        <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/758/original/alexandra-fuller-wkgv7I2VTzM-unsplash.jpg?1701614524"
+        alt= />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/759/original/blaz-photo-zMRLZh40kms-unsplash.jpg?1701614535"
+          alt=""
+        />
+      </div>
+      <p>
+        This relaxing, enriching, and productive hobby might just change your
+        life too, if you let it. It doesn't matter if you haven't done it much
+        lately or you never really have. All that matters is that you start and
+        you keep going. If you develop a reading habit, you'll see that the
+        benefits of reading are plentiful.
+      </p>
+
+      <button class="share-button">
+        Share your favorite book with us here 👈
+      </button>
+    </div>
+    <footer>
+      Coded with 🩷 by
+      <a href="https://www.linkedin.com/in/jada-baron" target="_blank"
+        >Jada Baron</a
+      >
+    </footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        body.classList.toggle("dark");
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+
+      function shareBook() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        alert("Welcome " + name + "! 👋");
+
+        let bookworm = prompt(
+          "So " + name + "," + " are you a fellow bookworm? 📚🐛"
+        );
+        bookworm = bookworm.toLowerCase();
+        if (bookworm === "yes") {
+          prompt("Me too! What is your favourite book?");
+        } else {
+          alert(
+            "Well there's tons for you to get started with if you want to change that 😍" +
+              " I recommend reading Before I Let Go by Kennedy Ryan if you're into romance!"
+          );
+        }
+      }
+      let shareButton = document.querySelector(".share-button");
+      shareButton.addEventListener("click", shareBook);
+    </script>
+  </body>
+</html>
